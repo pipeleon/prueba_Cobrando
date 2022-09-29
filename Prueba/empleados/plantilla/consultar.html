@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>
+            Base de Datos de Empleados
+        </title>
+    </head>
+    <body>
+        <h1>Base de Datos de Empleados</h1>
+        <table>
+            <tr>
+                <td>Id    </td>
+                <td>Nif          </td>
+                <td>Nombre       </td>
+                <td>Apellido1    </td>
+                <td>Apellido2    </td>
+                <td>Departamento </td>
+                <td></td>
+                <td></td>
+            </tr>
+            {% for empleado in empleados %}
+                <tr>
+                    <td>{{empleado.id}}</td>
+                    <td>{{empleado.nif}}</td>
+                    <td>{{empleado.nombre}}</td>
+                    <td>{{empleado.apellido1}}</td>
+                    <td>{{empleado.apellido2}}</td>
+                    <td>{{empleado.codigo_departamento.nombre}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <p></p>
+        <form action="/consultar/" method="POST">{% csrf_token %} 
+            <table>
+            <tr>Insertar Nuevo Empleado</tr>
+            <tr><td>Nif:</td> <td><input type="text" name="nif"></td></tr>
+            <tr><td>Nombre:</td> <td><input type="text" name="nombre"></td></tr>
+            <tr><td>Apellido 1:</td> <td><input type="text" name="apellido1"></td></tr>
+            <tr><td>Apellido 2:</td> <td><input type="text" name="apellido2"></td></tr>
+            <tr><td>Departamento:</td> <td><select name="departamento" id="dep">
+                {% for departamento in departamentos %}
+                <option>{{departamento.nombre}}</option>
+                {% endfor %}
+            </select></td></tr>
+            </table>
+            <input type="submit" value="Enviar"/>
+        </form>
+        <form action="/Actualizar/" method="GET">
+            <table>
+                <tr>Actualizar Empleado</tr>
+                <tr><td>Id:</td> <td><input type="text" name="id"></td></tr>
+            </table>
+            <input type="submit" value="Enviar"/>
+        </form>
+        <form action="/eliminar/" method="GET">
+            <table>
+                <tr>Borrar Empleado</tr>
+                <tr><td>Id:</td> <td><input type="text" name="id"></td></tr>
+            </table>
+            <input type="submit" value="Enviar"/>
+        </form>
+    </body>
+</html>
