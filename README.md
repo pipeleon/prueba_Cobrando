@@ -14,6 +14,7 @@ Para comenzar se tiene que clonar este repositorio
 
 ```bash
 ~$ git clone https://github.com/pipeleon/prueba_Cobrando.git
+~$ cd prueba_Cobrando/
 ```
 
 ## Docker Compose
@@ -23,6 +24,18 @@ Para ver la aplicacion se requiere correr los siguientes comandos para que se ab
 ~$ docker-compose run web python3 Prueba/manage.py migrate
 ~$ docker-compose up
 ```
+
+La applicacion estara disponible en http://0.0.0.0:1234/consultar
+
+## Funcionamiento local
+Se puede corre la applicacion de manera local con el siguiente comando:
+
+```bash
+~$ python Prueba/manage.py runserver
+```
+
+La applicacion estara disponible en http://127.0.0.1:8000/consultar
+
 
 ## Funcionamiento
 En el browser se desplegara la aplicacion, en esta puedes visualizar los empleados en la base de datos local con la oportunidad de realizar 3 acciones: 
