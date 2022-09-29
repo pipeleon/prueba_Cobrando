@@ -8,18 +8,18 @@
         <h1>Base de Datos de Empleados</h1>
         <table>
             <tr>
-                <td>Id    </td>
-                <td>Nif          </td>
-                <td>Nombre       </td>
-                <td>Apellido1    </td>
-                <td>Apellido2    </td>
-                <td>Departamento </td>
+                <td><strong>Id</strong>    </td>
+                <td><strong>Nif</strong>          </td>
+                <td><strong>Nombre</strong>       </td>
+                <td><strong>Apellido1</strong>    </td>
+                <td><strong>Apellido2</strong>    </td>
+                <td><strong>Departamento</strong> </td>
                 <td></td>
                 <td></td>
             </tr>
             {% for empleado in empleados %}
                 <tr>
-                    <td>{{empleado.id}}</td>
+                    <td><strong>{{empleado.id}}</strong></td>
                     <td>{{empleado.nif}}</td>
                     <td>{{empleado.nombre}}</td>
                     <td>{{empleado.apellido1}}</td>
@@ -31,7 +31,7 @@
         <p></p>
         <form action="/consultar/" method="POST">{% csrf_token %} 
             <table>
-            <tr>Insertar Nuevo Empleado</tr>
+            <tr><strong>Insertar Nuevo Empleado</strong></tr>
             <tr><td>Nif:</td> <td><input type="text" name="nif"></td></tr>
             <tr><td>Nombre:</td> <td><input type="text" name="nombre"></td></tr>
             <tr><td>Apellido 1:</td> <td><input type="text" name="apellido1"></td></tr>
@@ -46,7 +46,7 @@
         </form>
         <form action="/actualizar/" method="GET">
             <table>
-                <tr>Actualizar Empleado</tr>
+                <tr><strong>Actualizar Empleado</strong></tr>
                 <tr><td>Id:</td> <td><input type="text" name="id"></td></tr>
                 <tr><td><select name="atributo" id="dep">
                     <option>nif</option>
@@ -59,7 +59,7 @@
         </form>
         <form action="/eliminar/" method="GET">
             <table>
-                <tr>Borrar Empleado</tr>
+                <tr><strong>Borrar Empleado</strong></tr>
                 <tr><td>Id:</td> <td><input type="text" name="id"></td></tr>
             </table>
             <input type="submit" value="Enviar"/>
