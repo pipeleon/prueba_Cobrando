@@ -44,10 +44,16 @@
             </table>
             <input type="submit" value="Enviar"/>
         </form>
-        <form action="/Actualizar/" method="GET">
+        <form action="/actualizar/" method="GET">
             <table>
                 <tr>Actualizar Empleado</tr>
                 <tr><td>Id:</td> <td><input type="text" name="id"></td></tr>
+                <tr><td><select name="atributo" id="dep">
+                    <option>nif</option>
+                    <option>nombre</option>
+                    <option>apellido1</option>
+                    <option>apellido2</option>
+                </select></td> <td><input type="text" name="nuevo"></td></tr>
             </table>
             <input type="submit" value="Enviar"/>
         </form>

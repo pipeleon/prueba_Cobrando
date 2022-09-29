@@ -15,6 +15,14 @@ def consultar(request):
 
     return render(request, "consultar.html", {"empleados":empleados, "departamentos": departamentos})
 
+def actualizar(request):
+    empleado = Empleado.objects.get(id=request.GET["id"])
+
+    empleado.__setattr__(request.GET["atributo"], request.GET["nuevo"])
+    empleado.save()
+
+    return consultar(request)
+
 def eliminar(request):
     Empleado.objects.get(id=request.GET["id"]).delete()
 

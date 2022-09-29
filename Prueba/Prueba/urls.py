@@ -21,5 +21,6 @@ from empleados import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('consultar/', views.consultar),
-    path('eliminar/', views.eliminar)
+    path('eliminar/', views.eliminar),
+    path('actualizar/', views.actualizar),
 ]
