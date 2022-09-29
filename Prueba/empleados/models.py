@@ -1,11 +1,12 @@
 from django.db import models
 
-# Create your models here.
 
+"""Clase de la Tabla Departamento"""
 class Departamento(models.Model):
     nombre = models.CharField(max_length=100)
     presupuesto = models.FloatField()
 
+"""Clase de la Tabla Empleado con relacion 1 a muchos con la tabla Departamento"""
 class Empleado(models.Model):
     nif = models.CharField(max_length=9)
     nombre = models.CharField(max_length=100)
