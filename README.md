@@ -26,9 +26,9 @@ Para ver la aplicacion se requiere correr los siguientes comandos para que se ab
 
 ## Funcionamiento
 En el browser se desplegara la aplicacion, en esta puedes visualizar los empleados en la base de datos local con la oportunidad de realizar 3 acciones: 
-    - Insertar un nuevo empleado con todos sus campos
-    - Actualizar un empleado de acuerdo a su Id y el campo que se quiera actualizar
-    - Borrar un empleado de acuerdo a la ID
+- Insertar un nuevo empleado con todos sus campos
+- Actualizar un empleado de acuerdo a su Id y el campo que se quiera actualizar
+- Borrar un empleado de acuerdo a la ID
 
 ## Autor
 [<img src="https://avatars.githubusercontent.com/u/91047947" width="110" style="border-radius: 50%"><br><sub>Felipe Leon<br><sup>@pipeleon](https://github.com/pipeleon) |
